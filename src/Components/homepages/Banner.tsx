@@ -4,8 +4,8 @@ import banner from '@/assets/banner.png'
 
 const Banner = () => {
     return (
-        <section className='max-w-7xl mx-auto my-12'>
-        <div className="grid grid-cols-2 gap-4 items-center">
+        <section className='max-w-7xl mx-auto my-12 bg-[#15171D] rounded-xl '>
+        <div className="grid grid-cols-2 p-8 gap-4 items-center">
       <div className='space-y-6'>
         <p className="text-[#C2F800]">WORKOUT LIBRARY</p>
 

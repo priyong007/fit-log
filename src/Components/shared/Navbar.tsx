@@ -34,10 +34,11 @@ const Navbar = () => {
               <li>
                 <Link href='/workouts'>Workouts</Link>
               </li>
-             
               <li>
-                <a>Item 3</a>
+                <Link href='/my-plan'>My Plan</Link>
               </li>
+             
+              
             </ul>
           </div>
           <Image src={logo} alt="logo-image" />
@@ -48,10 +49,11 @@ const Navbar = () => {
             <li>
               <Link href='/workouts'>Workouts</Link>
             </li>
-            
+
             <li>
-              <a>Item 3</a>
+              <Link href='/my-plan'>My Plan</Link>
             </li>
+            
           </ul>
         </div>
         <div className="navbar-end gap-2">

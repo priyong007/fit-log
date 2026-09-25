@@ -1,3 +1,5 @@
+import AddPlanButton from '@/Components/workDetails/AddPlanButton';
+import SaveLaterButton from '@/Components/workDetails/SaveLaterButton';
 import { IWork } from '@/types/workType';
 import Image from 'next/image';
 import React from 'react';
@@ -102,8 +104,8 @@ const WorkDtailsPageProps = async ({ params }: IWorkDtailsPageProps) => {
           </div>
 
           <div className="flex gap-4">
-            <button className="bg-[#C2F800] text-black px-4 py-2 rounded-xl flex gap-2"> <span className='pt-1'><FaRegCalendarAlt /></span>Add to Today&apos;s workout plan</button>
-            <button className="bg-[#1B1F28] text-white px-4 py-2 rounded-xl flex gap-2 border border-[#343A46] shadow-md"> <span className='pt-1 '><CiBookmark /></span>Save for later</button>
+            <AddPlanButton work={work}/>
+            <SaveLaterButton work={work} />
           </div>
         </div>
       </div>

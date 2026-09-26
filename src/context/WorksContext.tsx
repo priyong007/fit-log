@@ -1,25 +1,45 @@
 
-'use client'
-import React, { createContext, ReactNode, useState } from 'react';
+'use client';
 
+import React, {
+  createContext,
+  ReactNode,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 
-export const WorksContext = createContext({})
-const WorksProvider = ({children} : {children: ReactNode}) => {
+import { IWork } from '@/types/workType';
 
-    const [addplan, setAddPlan] = useState([]);
-    const [saveLater, setSaveLater] = useState([]);
+interface IWorksContext {
+  addplan: IWork[];
+  setAddPlan: Dispatch<SetStateAction<IWork[]>>;
+  saveLater: IWork[];
+  setSaveLater: Dispatch<SetStateAction<IWork[]>>;
+}
 
-    const sharedData = {
-        addplan,
-        setAddPlan,
-        saveLater,
-        setSaveLater
-    }
-    return (
-        <div>
-            <WorksContext.Provider value={sharedData}>{children}</WorksContext.Provider>
-        </div>
-    );
+export const WorksContext = createContext<IWorksContext>(
+  {} as IWorksContext
+);
+
+const WorksProvider = ({ children }: { children: ReactNode }) => {
+  const [addplan, setAddPlan] = useState<IWork[]>([]);
+  const [saveLater, setSaveLater] = useState<IWork[]>([]);
+
+  const sharedData = {
+    addplan,
+    setAddPlan,
+    saveLater,
+    setSaveLater,
+  };
+
+  return (
+    <div>
+      <WorksContext.Provider value={sharedData}>
+        {children}
+      </WorksContext.Provider>
+    </div>
+  );
 };
 
 export default WorksProvider;

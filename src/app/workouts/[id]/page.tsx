@@ -3,8 +3,8 @@ import SaveLaterButton from '@/Components/workDetails/SaveLaterButton';
 import { IWork } from '@/types/workType';
 import Image from 'next/image';
 import React from 'react';
-import { CiBookmark } from 'react-icons/ci';
-import { FaRegCalendarAlt } from 'react-icons/fa';
+
+
 
 interface IWorkDtailsPageProps {
   params: Promise<{

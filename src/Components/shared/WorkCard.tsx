@@ -30,7 +30,7 @@ const WorkCard = ({work} : IWorkCardProps) => {
       />
 
       {/* Workout name */}
-      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/80 to-transparent">
+      <div className="absolute bottom-0 left-0 right-0 p-5 bg-linear-to-t from-black/80 to-transparent">
         <h2 className="text-2xl font-bold text-white">
           {work.name}
         </h2>

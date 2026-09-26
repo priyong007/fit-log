@@ -1,5 +1,5 @@
 'use client';
-import WorkCard from '@/Components/shared/WorkCard';
+
 import { WorksContext } from '@/context/WorksContext';
 import { IWork } from '@/types/workType';
 import Image from 'next/image';
@@ -149,7 +149,7 @@ const MyplanPage = () => {
               );
             })
           ) : (
-            <div className="min-h-[300px] flex items-center justify-center">
+            <div className="min-h-72 flex items-center justify-center">
               <p className="text-gray-400 text-lg">No Plan Added</p>
             </div>
           )}
@@ -249,7 +249,7 @@ const MyplanPage = () => {
     );
   })
 )  : (
-            <div className="min-h-[300px] flex flex-col items-center justify-center text-center">
+            <div className="min-h-72 flex flex-col items-center justify-center text-center">
               <h2 className="text-2xl font-bold text-white">
                 NOTHING HERE YET
               </h2>
@@ -265,9 +265,7 @@ const MyplanPage = () => {
           )}
         </div>
       </div>
-      add plan: {addplan.length}
-      <br />
-      save later : {saveLater.length}
+      
     </div>
   );
 };

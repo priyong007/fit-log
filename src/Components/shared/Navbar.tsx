@@ -1,9 +1,14 @@
+'use client';
 import Image from 'next/image';
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '@/assets/logo.png';
 import Link from 'next/link';
+import { WorksContext } from '@/context/WorksContext';
 
 const Navbar = () => {
+
+   const { addplan, saveLater } = useContext(WorksContext);
+
   return (
     <nav className=' bg-[#0C0D10]'>
       <div className="navbar  shadow-sm container mx-auto ">
@@ -57,8 +62,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <a className="btn">Plan</a>
-          <a className="btn">Saved</a>
+          <a className="btn">Plan <span>{addplan.length}</span></a>
+          <a className="btn">Saved <span>{saveLater.length}</span></a>
         </div>
       </div>
     </nav>

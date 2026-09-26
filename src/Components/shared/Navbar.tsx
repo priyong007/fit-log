@@ -46,8 +46,11 @@ const Navbar = () => {
               
             </ul>
           </div>
-          <Image src={logo} alt="logo-image" />
-          <a className="btn btn-ghost text-xl">FITLOG</a>
+
+          <Link href='/'>
+          <Image className='inline' src={logo} alt="logo-image" />
+          <p className="btn btn-ghost text-xl">FITLOG</p>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -62,8 +65,8 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-2">
-          <a className="btn">Plan <span>{addplan.length}</span></a>
-          <a className="btn">Saved <span>{saveLater.length}</span></a>
+          <a className="btn">Plan <span className='rounded-full bg-yellow-300 px-2 text-black' >{addplan.length}</span></a>
+          <a className="btn">Saved <span className='rounded-full border-2 border-[#D1D5DB] px-2'>{saveLater.length}</span></a>
         </div>
       </div>
     </nav>
